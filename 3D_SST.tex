@@ -1,0 +1,74 @@
+\documentclass[prb,singlecolumn]{revtex4}
+
+\begin{document}
+
+
+\title{Self-sustained turbulence in magnetized shear flow}
+\author{Zlatan D.~Dimitrov}
+\email{zlatan.dimitrov@}
+\author{Todor M.~Mishonov}
+\email{tmishonov@}
+\affiliation{Department of Theoretical Physics, Faculty of Physics,\\
+University of Sofia St.~Clement of Ohrid,\\
+5 J. Bourchier Blvd, BG-1164 Sofia, Bulgaria}
+
+\date{\today}
+
+\maketitle
+
+\begin{eqnarray}
+\mathrm{D}_{\overline{\tau}}^{\mathrm{\,shear}}\mathbf{v}_\mathbf{Q}(\tau) &=&
+-v_{x,\mathbf{Q}}\mathbf{e}_y + 2n_y\mathbf{n}v_{x,\mathbf{Q}}
+-\nu^\prime_\mathrm{k}Q^2\mathbf{v}_\mathbf{Q} + \Pi^{\perp\mathbf{Q}}\cdot\sum_{\mathbf{Q}'}\left[\mathbf{v}_{\mathbf{Q}'}\otimes\mathbf{v}_{\mathbf{Q}
+-\mathbf{Q}'} + \mathbf{b}_{\mathbf{Q}'}\otimes\mathbf{b}_{\mathbf{Q}-\mathbf{Q}'}\right]\cdot\mathbf{Q},
+\label{VelocityEvolution}
+\\
+\label{MagneticEvolution}
+\mathrm{D}_{\overline{\tau}}^{\mathrm{\,shear}}\mathbf{b}_\mathbf{Q}(\tau) &=& b_{x,\mathbf{Q}}\mathbf{e}_y
+-(\mathbf{Q}\cdot{\alpha})\,\mathbf{v}_\mathbf{Q} -\nu'_\mathrm{m}Q^2\mathbf{b}_\mathbf{Q} + \Pi^{\perp\mathbf{Q}}\cdot\sum_{\mathbf{Q}'}\left[\mathbf{b}_{\mathbf{Q}'}\otimes\mathbf{v}_{\mathbf{Q}
+-\mathbf{Q}'} - \mathbf{v}_{\mathbf{Q}'}\otimes\mathbf{b}_{\mathbf{Q}-\mathbf{Q}'}\right]\cdot\mathbf{Q}, 
+\\
+\mathbf{Q} \cdot \mathbf{N}_v &=& 0, \quad \mathbf{v}_\mathbf{Q}(\overline{\tau}_0)=\Pi^{\perp\mathbf{Q}}\mathbf{v}_\mathbf{Q}(\overline{\tau}_0),\quad
+\mathbf{Q}\cdot \mathbf{N}_b=0, \quad \mathbf{b}_\mathbf{Q}(\overline{\tau}_0)=\Pi^{\perp\mathbf{Q}}\mathbf{b}_\mathbf{Q}(\overline{\tau}_0),\nonumber 
+\\
+\Pi^{\perp\mathbf{Q}} &\equiv &\openone-\mathbf{n}\otimes \mathbf{n},\quad \mathbf{n}\equiv \frac{\mathbf{Q}}{Q},\quad \overline{\tau}\equiv-\frac{Q_x}{Q_y}
+\\
+\label{ushear}
+\mathrm{D}_\tau^{\mathrm{\,shear}} &\equiv& \partial_\tau+\mathbf{U}_{\mathrm{shear}}(\mathbf{Q})\cdot\partial_{\mathbf{Q}}=\partial_\tau-Q_y\partial_{Q_x}= \partial_\tau + \partial_{\overline{\tau}},\quad
+\mathbf{U}_\mathrm{shear}(\mathbf{Q})\equiv-Q_y\mathbf{e}_x, 
+\end{eqnarray}
+
+\begin{equation}
+\label{bay_ivan}
+\mathrm{d}^2_{\overline{\tau}}b_y + \nu_\mathrm{tot}^\prime Q^2\mathrm{d}_{\overline{\tau}}b_y + [Q^2_\alpha + 2\nu_\mathrm{m}^\prime \tau Q_y^2 -\nu_\mathrm{m}^\prime\nu_\mathrm{k}^\prime Q^4]b_y
+= \mathrm{d}_{\overline{\tau}}N^y_b - Q_\alpha N_v^y.
+\end{equation}
+
+$\Pi^{\perp\mathbf{Q}}$ is the projection operator and have
+
+\begin{eqnarray}
+\lim\limits_{\tau \rightarrow \infty}{ \Pi^{\perp\mathbf{Q}} } = \left(\begin{array}{ccc}
+ 0 & 0 & 0 \\
+ 0 & 1 & 0 \\
+ 0 & 0 & 1 
+\end{array} \right)
+\end{eqnarray}
+
+\begin{eqnarray}
+ \lim\limits_{\tau \rightarrow \infty}{\mathbf{N}_b} &=&
+\left(\begin{array}{c}
+ 0  \\
+ \sum_{\mathbf{Q}'} (b_{\mathbf{Q}'}^yv_{\mathbf{Q}-\mathbf{Q}'}^y - v_{\mathbf{Q}'}^yb_{\mathbf{Q}-\mathbf{Q}'}^y)Q_y + (b_{\mathbf{Q}'}^yv_{\mathbf{Q}-\mathbf{Q}'}^z - v_{\mathbf{Q}'}^yb_{\mathbf{Q}-\mathbf{Q}'}^z)Q_z  \\
+ \sum_{\mathbf{Q}'} (b_{\mathbf{Q}'}^zv_{\mathbf{Q}-\mathbf{Q}'}^y - v_{\mathbf{Q}'}^zb_{\mathbf{Q}-\mathbf{Q}'}^y)Q_y + (b_{\mathbf{Q}'}^zv_{\mathbf{Q}-\mathbf{Q}'}^z - v_{\mathbf{Q}'}^zb_{\mathbf{Q}-\mathbf{Q}'}^z)Q_z \end{array} \right) \\
+  \lim\limits_{\tau \rightarrow \infty}{\mathbf{N}_v} &=&
+\left(\begin{array}{c}
+ 0  \\
+ \sum_{\mathbf{Q}'} (v_{\mathbf{Q}'}^yv_{\mathbf{Q}-\mathbf{Q}'}^y + b_{\mathbf{Q}'}^yb_{\mathbf{Q}-\mathbf{Q}'}^y)Q_y + (v_{\mathbf{Q}'}^yv_{\mathbf{Q}-\mathbf{Q}'}^z + b_{\mathbf{Q}'}^yb_{\mathbf{Q}-\mathbf{Q}'}^z)Q_z \\
+ \sum_{\mathbf{Q}'} (v_{\mathbf{Q}'}^zv_{\mathbf{Q}-\mathbf{Q}'}^y + b_{\mathbf{Q}'}^zb_{\mathbf{Q}-\mathbf{Q}'}^y)Q_y + (v_{\mathbf{Q}'}^zv_{\mathbf{Q}-\mathbf{Q}'}^z + b_{\mathbf{Q}'}^zb_{\mathbf{Q}-\mathbf{Q}'}^z)Q_z \end{array} \right)
+\end{eqnarray}
+
+
+
+
+
+\end{document}
