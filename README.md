@@ -1,2 +1,2 @@
-Accretion-Disk
+Accretion Disk
 ==============
