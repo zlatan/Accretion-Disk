@@ -378,5 +378,61 @@ $$ R \equiv \frac{\Gamma(\frac43)}{16\pi}\left(\frac6{\nu'_\mathrm{tot}}\right)^
 \nu_\mathrm{wave}  \approx\frac{R}{(2\pi)^3}\int_0^\infty Q_y \tilde{D}_\mathrm{f}^2(Q_y,Q_z)\,\mathrm{d}Q_y\mathrm{d}Q_z .
 \end{equation}
 
+\hrule
+
+\begin{eqnarray}
+ &&v_{Q_1}^yv_{Q_2}^y = A^{yy} \nonumber \\
+ &&\left(\frac{C_1^u C_2^u}{K_1^\perp K_2^\perp}\cos(-Q_1^x)\cos(-Q_2^x) + C_1^gC_2^g\sin(-Q_1^x)\sin(-Q_2^x)  + \frac{C_1^uC_2^g}{K_1^\perp}\cos(-Q_1^x)\sin(-Q_2^x) + \frac{C_1^gC_2^u}{K_2^\perp}\sin(-Q_1^x)\cos(-Q_2^x)    \right) \nonumber \\
+ &&b_{Q_1}^yb_{Q_2}^y = A^{yy} \nonumber \\
+ &&\left(\frac{C_1^u C_2^u}{K_1^\perp K_2^\perp}\sin(-Q_1^x)\sin(-Q_2^x) + C_1^gC_2^g\cos(-Q_1^x)\cos(-Q_2^x)  + \frac{C_1^uC_2^g}{K_1^\perp}\sin(-Q_1^x)\cos(-Q_2^x) + \frac{C_1^gC_2^u}{K_2^\perp}\cos(-Q_1^x)\sin(-Q_2^x)    \right) \nonumber \\
+ &&v_{Q_1}^yv_{Q_2}^z = A^{yz} \nonumber \\
+ &&\left(\frac{C_1^u C_2^u}{K_1^\perp K_2^\perp}\cos(-Q_1^x)\cos(-Q_2^x) + \frac{C_1^gC_2^g}3\sin(-Q_1^x)\sin(-Q_2^x)  + \frac{C_1^uC_2^g}{3K_1^\perp}\cos(-Q_1^x)\sin(-Q_2^x) + \frac{C_1^gC_2^u}{K_2^\perp}\sin(-Q_1^x)\cos(-Q_2^x)    \right) \nonumber \\
+ &&b_{Q_1}^yb_{Q_2}^z = A^{yz} \nonumber \\
+ &&\left(\frac{C_1^u C_2^u}{K_1^\perp K_2^\perp}\sin(-Q_1^x)\sin(-Q_2^x) + \frac{C_1^gC_2^g}3\cos(-Q_1^x)\cos(-Q_2^x)  + \frac{C_1^uC_2^g}{3K_1^\perp}\sin(-Q_1^x)\cos(-Q_2^x) + \frac{C_1^gC_2^u}{K_2^\perp}\cos(-Q_1^x)\sin(-Q_2^x)    \right) \nonumber 
+\end{eqnarray}
+
+\begin{eqnarray}
+ && K_1^\perp \equiv \sqrt{K_z^2 + (K_y+Q_y/2)^2},\qquad  K_2^\perp \equiv \sqrt{K_z^2 + (K_y-Q_y/2)^2}, \\
+ && \tilde{A^y} \equiv A^{yy}Q_y,\quad \tilde{A^z} \equiv A^{yz}Q_z,\quad A^{yy} = \frac{16K_z^4}{K_1^y K_1^\perp K_2^y K_2^\perp}   , \quad A^{yz} = \frac{-16K_z^3}{K_1^y K_1^\perp K_2^\perp}
+\end{eqnarray}
+
+
+\begin{eqnarray}
+ && b_{\mathbf{Q}'}^yb_{\mathbf{Q}-\mathbf{Q}'}^y + v_{\mathbf{Q}'}^yv_{\mathbf{Q}-\mathbf{Q}'}^y)Q_y + (b_{\mathbf{Q}'}^yb_{\mathbf{Q}-\mathbf{Q}'}^z + v_{\mathbf{Q}'}^yv_{\mathbf{Q}-\mathbf{Q}'}^z)Q_z = \nonumber \\ 
+ && \left[\cos(-Q_1^x)\cos(-Q_2^x) + \sin(-Q_1^x)\sin(-Q_2^x)\right]\left[\frac{C_1^u C_2^u}{K_1^\perp K_2^\perp}(\tilde{A^y} + \tilde{A^z}) + C_1^gC_2^g(\tilde{A^y} + \frac{\tilde{A^z}}3 ) \right] + \\
+ && \left[\cos(-Q_1^x)\sin(-Q_2^x) + \sin(-Q_1^x)\cos(-Q_2^x)\right]\left[\frac{C_1^g C_2^u}{K_2^\perp}(\tilde{A^y} + \tilde{A^z}) + \frac{C_1^u C_2^g}{K_1^\perp}(\tilde{A^y} + \frac{\tilde{A^z}}3 ) \right] = \\
+ && \cos(2K_x)\left[\frac{C_1^u C_2^u}{K_1^\perp K_2^\perp}(\tilde{A^y} + \tilde{A^z}) + C_1^gC_2^g(\tilde{A^y} + \frac{\tilde{A^z}}3 ) \right] -\sin(Q_x)\left[\frac{C_1^g C_2^u}{K_2^\perp}(\tilde{A^y} + \tilde{A^z}) + \frac{C_1^u C_2^g}{K_1^\perp}(\tilde{A^y} + \frac{\tilde{A^z}}3 ) \right]
+ \end{eqnarray}
+
+
+\begin{eqnarray}
+  \int_{Q_x/2}^\infty \frac{\mathrm{d}K_x}{2\pi}  \exp\left\{ -\frac{\nu'_{\mathrm{tot}}}{6}\left[\frac{(K_x-Q_x/2)^3}{K_y+Q_y/2}+\frac{(K_x+Q_x/2)^3}{K_y-Q_y/2}\right]\right\} \approx \frac1{2\pi} \left( \frac{6}{\nu'_{tot}}  \right)^{1/3} \frac{\Gamma(4/3)}{3\left( \frac1{K_y + Q_y/2} + \frac1{K_y - Q_y/2} \right)^{1/3}} \nonumber \\ 
+\end{eqnarray}
+
+\begin{eqnarray*}
+ X &=& 0,\nonumber \\
+ Y &=& \frac{\Gamma(4/3)Q_z}{4\pi Q_y^{2/3}}\left(\frac6{\nu'_\mathrm{tot}}\right)^{2/3} \int_0^\infty \frac12 \exp\left\{-\frac{q_x^3}{Q_y} \right\} \mathrm{d}q_x \cdot \nonumber \\
+ &&\int_{Q_y/2}^\infty \frac{\mathrm{d}K_y}{2\pi} \int_{-\infty}^\infty \frac{\mathrm{d}K_z}{2\pi} \, \frac{Q_1^y}{3\left( \frac1{K_y + Q_y/2} + \frac1{K_y - Q_y/2} \right)^{1/3}} 
+ \left[\frac{C_1^g C_2^u}{K_2^\perp}(\tilde{A^y} + \tilde{A^z}) + \frac{C_1^u C_2^g}{K_1^\perp}(\tilde{A^y} + \frac{\tilde{A^z}}3 ) \right] .\nonumber
+\end{eqnarray*}
+
+After integration over $\mathrm{d}q_x$ we have
+
+\begin{eqnarray}
+  Y = \frac{\Gamma^2(\frac43)Q_z}{16\pi Q_y^{2/3}}\left(\frac6{\nu'_\mathrm{tot}}\right)^{2/3} \int_{Q_y/2}^\infty \frac{\mathrm{d}K_y}{2\pi} \int_{-\infty}^\infty \frac{\mathrm{d}K_z}{2\pi} \, Q_1^y 
+ \frac{Q_1^y}{3\left( \frac1{K_y + Q_y/2} + \frac1{K_y - Q_y/2} \right)^{1/3}} 
+ \left[\frac{C_1^g C_2^u}{K_2^\perp}(\tilde{A^y} + \tilde{A^z}) + \frac{C_1^u C_2^g}{K_1^\perp}(\tilde{A^y} + \frac{\tilde{A^z}}3 ) \right] .\nonumber
+\end{eqnarray}
+
+\begin{equation}
+ C^g = D_f D_u \sin(\phi_f - \delta_u),\qquad C^u = D_f D_g \sin(\phi_f - \delta_g)
+\end{equation}
+
+$$ R \equiv \frac{\Gamma^2(\frac43)}{16\pi}\left(\frac6{\nu'_\mathrm{tot}}\right)^{2/3},\quad  \tilde{Y} \equiv YR,\quad \tilde{C} \equiv CR. $$
+
+\begin{equation}
+\nu_\mathrm{wave}  \approx\frac{R}{(2\pi)^3}\int_0^\infty Q_y \tilde{D}_\mathrm{f}^2(Q_y,Q_z)\,\mathrm{d}Q_y\mathrm{d}Q_z .
+\end{equation}
+
 
 \end{document}
