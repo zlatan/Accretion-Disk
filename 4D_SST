@@ -1,0 +1,130 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[margin=0.1in, paperwidth=6.5in, paperheight=13in,landscape]{geometry}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsbsy}
+
+\pagestyle{empty}
+\newcommand{\nn}{\nonumber}
+
+\begin{document}
+
+
+\begin{eqnarray}
+\mathrm{d}_\tau\mathbf{v}&=&-v_x\mathbf{e}_y+2n_y\mathbf{n}v_x+K_\alpha\mathbf{b},\\
+\mathrm{d}_\tau\mathbf{b}&=&b_x\mathbf{e}_y - K_\alpha\mathbf{v}, \qquad \mathbf{K}\cdot\mathbf{b}=0, \qquad \mathbf{K}\cdot\mathbf{v}=0,
+\end{eqnarray}
+
+\begin{eqnarray}
+\mathrm{d}_\xi^2\psi+\left[\tilde{K}^2-\frac{1}{(1+\xi^2)^2}\right]\psi=0,\quad \psi(\xi)=C_\mathrm g \psi_\mathrm g(\xi) + C_\mathrm u \psi_\mathrm u(\xi),\qquad \\
+\psi_\mathrm g\!\!=\!\sqrt{1+\xi^2} \,\mathrm{HeunC}(0,-\frac{1}{2},0,-\frac{\tilde{K}^2}{4},\!\frac{1+\tilde{K}^2}{4},-\xi^2),\qquad \psi_\mathrm u\!\!=\!\xi\sqrt{1+\xi^2}\,\mathrm{HeunC}(0,+\frac{1}{2},0,-\frac{\tilde{K}^2}{4},\!\frac{1+\tilde{K}^2}{4},-\xi^2),
+\end{eqnarray}
+
+\begin{equation}
+\left(\mathrm{d}_{\xi}^2 + \tilde{K}^2\right)b_z = 2K_z \frac{v_x}{1+\xi^2}.
+\end{equation}
+
+
+
+\begin{eqnarray}
+b_x&=&\frac{\psi(\xi)}{\sqrt{1+\xi^2}},\qquad v_x = -\frac1{\tilde{K}}\mathrm{d}_{\xi}b_x=-\frac1{\tilde{K}}\left[ \frac{(1+\xi^2)\mathrm{d}_{\xi}\psi(\xi)-\xi\psi}{(1+\xi^2)^{3/2}} \right],\nn \\
+b_z&=&\frac{2K_z}{\tilde{K}} \int_{-\infty}^{\xi} \sin[\tilde{K}(\xi-\xi^{\prime})] \frac{v_x(\xi^{\prime})} {1+\xi^{\prime 2}}\mathrm{d}\xi^{\prime},\qquad v_z=-\frac1{\tilde{K}}\mathrm{d}_{\xi}b_z=-\frac{2K_z}{\tilde{K}} \int_{-\infty}^{\xi} \cos[\tilde{K}(\xi-\xi^{\prime})] \frac{v_x(\xi^{\prime})} {1+\xi^{\prime 2}}\mathrm{d}\xi^{\prime},\nn \\
+b_y&=&-\frac{2K_z^2}{K_y\tilde{K}}\int_{-\infty}^{\xi} \sin[\tilde{K}(\xi-\xi^{\prime})] \frac{v_x(\xi^{\prime})} {1+\xi^{\prime 2}}\mathrm{d}\xi^{\prime} +\frac{\tilde{K}}{K_y}\frac{\xi\psi(\xi)}{\sqrt{1+\xi^2}},\qquad v_y = \frac{K_\perp}{K_y}\xi v_x -\frac{K_z}{K_y}v_z=-\frac{2K_z^2}{\tilde{K}K_y} \int_{-\infty}^{\xi} \cos[\tilde{K}(\xi-\xi^{\prime})] \frac{v_x(\xi^{\prime})} {1+\xi^{\prime 2}}\mathrm{d}\xi^{\prime}-\frac1{K_\alpha}\left[ \frac{\xi(1+\xi^2)\mathrm{d}_{\xi}\psi(\xi)-\xi^2\psi}{(1+\xi^2)^{3/2}} \right]\nn.
+\end{eqnarray}
+
+\begin{eqnarray}
+b_z(\xi) &=& \frac{2K_z}{K_\perp} \int_{-\infty}^{\xi} \frac{\sin\left[K_\perp(\xi-\xi^\prime) \right]}{K_\perp(1+\xi^\prime)^{5/2}}
+ \left[ (1+\xi'^2)\mathrm{d}_{\xi'}\psi(\xi') - \xi'\psi(\xi') \right] \mathrm{d}\xi' 
+= \frac{2K_z\sin(K_\perp\xi)}{K_\perp} \int_{-\infty}^{\xi} \frac{\cos\left(K_\perp\xi^\prime \right)}{K_\perp(1+\xi^\prime)^{5/2}}
+ \left[ (1+\xi'^2)\left(C_\mathrm{g}\mathrm{d}_{\xi'}\psi_\mathrm{g}(\xi') + C_\mathrm{u}\mathrm{d}_{\xi'}\psi_\mathrm{u}(\xi') \right)- \xi'\left(C_\mathrm{g}\psi_\mathrm{g}(\xi') + C_\mathrm{u}\psi_\mathrm{u}(\xi') \right)  \right] \mathrm{d}\xi' \nonumber
+ - \\
+&& \frac{2K_z\cos(K_\perp\xi)}{K_\perp} \int_{-\infty}^{\xi} \frac{\sin\left(K_\perp\xi^\prime \right)}{K_\perp(1+\xi^\prime)^{5/2}}
+ \left[ (1+\xi'^2)\left(C_\mathrm{g}\mathrm{d}_{\xi'}\psi_\mathrm{g}(\xi') + C_\mathrm{u}\mathrm{d}_{\xi'}\psi_\mathrm{u}(\xi') \right)- \xi'\left(C_\mathrm{g}\psi_\mathrm{g}(\xi') + C_\mathrm{u}\psi_\mathrm{u}(\xi') \right) \right] \mathrm{d}\xi' \nonumber
+ = \frac{2K_z}{K_\perp}\left[ J_{c,\mathrm{u}}C_\mathrm{u}\sin(K_\perp\xi)  - J_{s,\mathrm{g}}C_\mathrm{g}\cos(K_\perp\xi) \right] \approx \\
+ &&  \frac{4K_z}{K_\perp^2}C_\mathrm{u}\sin(K_\perp\xi) + \frac{4K_z}{3K_\perp}C_\mathrm{g}\cos(K_\perp\xi), \nonumber
+\\
+&& 
+J_{c,\mathrm{u}} = \int_{-\infty}^{\infty} \frac{\cos\left(K_\perp\xi^\prime \right)}{K_\perp(1+\xi^\prime)^{5/2}} \left[ (1+\xi'^2)\left(C_\mathrm{u}\mathrm{d}_{\xi'}\psi_\mathrm{u}(\xi') \right)- \xi' C_\mathrm{u}\psi_\mathrm{u}(\xi') \right], \lim_{K_\perp \rightarrow 0} J_{c,\mathrm{u}} = \frac2{K_\perp}\qquad  J_{s,\mathrm{g}} = \int_{-\infty}^{\infty} \frac{\sin\left(K_\perp\xi^\prime \right)}{K_\perp(1+\xi^\prime)^{5/2}} \left[ (1+\xi'^2)\left(C_\mathrm{g}\mathrm{d}_{\xi'}\psi_\mathrm{g}(\xi') \right)- \xi' C_\mathrm{g}\psi_\mathrm{g}(\xi') \right], \lim_{K_\perp \rightarrow 0} J_{c,\mathrm{u}} = -\frac23 \nonumber \\
+v_z(\xi) &=& -\frac{2K_z}{K_\perp} \int_{-\infty}^{\xi} \frac{\cos\left[K_\perp(\xi-\xi^\prime) \right]}{K_\perp(1+\xi^\prime)^{5/2}}
+ \left[ (1+\xi'^2)\mathrm{d}_{\xi'}\psi(\xi') - \xi'\psi(\xi') \right] \mathrm{d}\xi' = \nonumber \\
+&& \frac{-2K_z\cos(K_\perp\xi)}{K_\perp} \int_{-\infty}^{\xi} \frac{\cos\left(K_\perp\xi^\prime \right)}{K_\perp(1+\xi^\prime)^{5/2}}
+ \left[ (1+\xi'^2)C_\mathrm{u}\mathrm{d}_{\xi'}\psi_\mathrm{u}(\xi') - \xi'C_\mathrm{u}\psi_\mathrm{u}(\xi')  \right] \mathrm{d}\xi' \nonumber
+ +
+ \frac{-2K_z\sin(K_\perp\xi)}{K_\perp} \int_{-\infty}^{\xi} \frac{\sin\left(K_\perp\xi^\prime \right)}{K_\perp(1+\xi^\prime)^{5/2}}
+ \left[ (1+\xi'^2)C_\mathrm{g}\mathrm{d}_{\xi'}\psi_\mathrm{g}(\xi') - \xi'C_\mathrm{g}\psi_\mathrm{g}(\xi') \right] \mathrm{d}\xi' \nonumber
+ = \\
+&& \frac{-2K_z}{K_\perp}\left[ J_{c,\mathrm{u}}C_\mathrm{u}\cos(K_\perp\xi)  - J_{s,\mathrm{g}}C_\mathrm{g}\sin(K_\perp\xi) \right] \approx \frac{-4K_z}{K_\perp^2}C_\mathrm{u}\cos(K_\perp\xi) + \frac{-4K_z}{3K_\perp}C_\mathrm{g}\sin(K_\perp\xi) \nonumber \\
+b_y &=& -\frac{2K_z^2}{K_\perp K_y} [\sin(K_\perp\xi) I_c(\xi) - \cos(K_\perp\xi) I_s(\xi)] + \frac{K_\perp}{K_y}\frac{\xi\psi(\xi)}{\sqrt{1+\xi^2}} \approx -\frac{4K_z^2}{K_\perp^2 K_y}C_\mathrm{u}\sin(K_\perp\xi) - \frac{4K_z^2}{K_\perp K_y}C_\mathrm{g}\cos(K_\perp\xi) + \frac{K_\perp}{K_y}\psi(\xi) \nonumber \\
+v_y &=& -\frac{2K_z^2}{K_\perp K_y} [\cos(K_\perp\xi) I_c(\xi) - \sin(K_\perp\xi) I_s(\xi)] - \frac{\mathrm{d}_\xi \psi(\xi)}{K_y} \approx -\frac{4K_z^2}{K_\perp^2 K_y}C_\mathrm{u}\cos(K_\perp\xi) - \frac{4K_z^2}{K_\perp K_y}C_\mathrm{g}\sin(K_\perp\xi) - \frac{\mathrm{d}_\xi \psi(\xi)}{K_y} \nonumber
+\end{eqnarray}
+
+
+\begin{eqnarray}
+%%%%%
+b_z(\xi) & \approx &  \frac{4K_z}{K_\perp}  \left[\frac{C_\mathrm{u}\sin(K_\perp\xi)}{K_\perp} + \frac{C_\mathrm{g}\cos(K_\perp\xi)}3\right] , \nonumber \\
+%%%%%%
+v_z(\xi) & \approx &  \frac{-4K_z}{K_\perp}  \left[\frac{C_\mathrm{u}\cos(K_\perp\xi)}{K_\perp} + \frac{C_\mathrm{g}\sin(K_\perp\xi)}3\right],
+\nonumber \\
+%%%%%%%
+b_y(\xi) & \approx & -\frac{4K_z^2}{K_\perp K_y} \left[ \frac{C_\mathrm{u}\sin(K_\perp\xi)}{K_\perp} + C_\mathrm{g}\cos(K_\perp\xi) \right] + \frac{K_\perp}{K_y}\psi(\xi), \nonumber \\
+%%%%%%%%
+v_y(\xi) & \approx & -\frac{4K_z^2}{K_\perp K_y} \left[ \frac{C_\mathrm{u}\cos(K_\perp\xi)}{K_\perp} + C_\mathrm{g}\sin(K_\perp\xi) \right] - \frac{\mathrm{d}_\xi \psi(\xi)}{K_y}. \nonumber
+\end{eqnarray}
+
+\begin{eqnarray}
+Q_1^x = -\left( K_x - \frac{Q_x}2  \right) < 0,\qquad Q_2^x = +\left( K_x + \frac{Q_x}2  \right) > 0,\qquad K_x \subset \left(\frac{Q_x}2,\infty\right), \nn \\
+Q_1^y = +\left( K_y + \frac{Q_y}2  \right) > 0,\qquad Q_2^y = -\left( K_y - \frac{Q_y}2  \right) < 0,\qquad K_y \subset \left(\frac{Q_y}2,\infty\right). \nn 
+\end{eqnarray}
+
+
+\begin{eqnarray}
+ b_1^yb_2^y &=& \left\{ \frac{-4K_z^2}{K_1^\perp K_1^y} \left[ \frac{C_1^uS(1)}{K_1^\perp} + C_1^gC(1) \right] + \frac{K_1^\perp}{K_1^y}\psi_1  \right\}
+              \left\{ \frac{-4K_z^2}{K_2^\perp K_2^y} \left[ \frac{C_2^uS(2)}{K_2^\perp} + C_2^gC(2) \right] + \frac{K_2^\perp}{K_2^y}\psi_2 \right\} =\nn \\
+              && \frac{16K_z^4}{K_1^\perp K_2^\perp K_1^y K_2^y}\left[ \frac{C_1^uS(1)}{K_1^\perp} + C_1^gC(1) \right]\left[ \frac{C_2^uS(2)}{K_2^\perp} + C_2^gC(2) \right] 
+               + \frac{-4K_z^2K_2^\perp}{K_1^\perp K_1^y K_2^y}\left[ \frac{C_1^uS(1)}{K_1^\perp} + C_1^gC(1) \right]\psi_2 
+               + \frac{-4K_z^2K_1^\perp}{K_2^\perp K_1^y K_2^y}\left[ \frac{C_2^uS(2)}{K_2^\perp} + C_2^gC(2) \right]\psi_1 
+               + \frac{K_1^\perp K_2^\perp}{K_1^yK_2^y}\psi_1\psi_2 \nn \\
+ v_1^yv_2^y &=& \left\{ \frac{-4K_z^2}{K_1^\perp K_1^y} \left[ \frac{C_1^uC(1)}{K_1^\perp} + C_1^gS(1) \right] - \frac{\dot{\psi_1}}{K_1^y}  \right\}
+                \left\{ \frac{-4K_z^2}{K_2^\perp K_2^y} \left[ \frac{C_2^uC(2)}{K_2^\perp} + C_2^gS(2) \right] - \frac{\dot{\psi_1}}{K_2^y}  \right\} =\nn \\
+              && \frac{16K_z^4}{K_1^\perp K_2^\perp K_1^y K_2^y}\left[ \frac{C_1^uC(1)}{K_1^\perp} + C_1^gS(1) \right]\left[ \frac{C_2^uC(2)}{K_2^\perp} + C_2^gS(2) \right] 
+               + \frac{4K_z^2 \dot{\psi_2}}{K_1^\perp K_1^y K_2^y}\left[ \frac{C_1^uC(1)}{K_1^\perp} + C_1^gS(1) \right] 
+               + \frac{4K_z^2 \dot{\psi_1}}{K_2^\perp K_1^y K_2^y}\left[ \frac{C_2^uC(2)}{K_2^\perp} + C_2^gS(2) \right] 
+               + \frac{\dot{\psi_1} \dot{\psi_2}}{K_1^yK_2^y}
+\end{eqnarray}
+
+\begin{eqnarray}
+ (b_1^yb_2^y + v_1^yv_2^y)Q? &=&  \frac{16K_z^4}{K_1^\perp K_2^\perp K_1^y K_2^y}\left\{ 
+ \left[S(1)S(2) + C(1)C(2)\right]\left[ \frac{C_1^uC_2^u}{K_1^\perp K_2^\perp} +C_1^g C_2^g\right] + 
+ \left[S(1)C(2) + C(1)S(2)\right]\left[ \frac{C_1^uC_2^g}{K_1^\perp} + \frac{C_2^uC_1^g}{K_2^\perp}\right]
+ \right\} + \nonumber \\
+ && \frac{4K_z^2K_2^\perp}{K_1^\perp K_1^y K_2^y}\left[ \frac{C_1^uS(1)}{K_1^\perp} + C_1^gC(1) \right]\psi_2  + \frac{4K_z^2K_1^\perp}{K_2^\perp K_1^y K_2^y}\left[ \frac{C_2^uS(2)}{K_2^\perp} + C_2^gC(2) \right]\psi_1 + \frac{K_1^\perp K_2^\perp}{K_1^yK_2^y}\psi_1\psi_2 + \nonumber \\
+ && \frac{4K_z^2 \dot{\psi_2}}{K_1^\perp K_1^y K_2^y}\left[ \frac{C_1^uC(1)}{K_1^\perp} + C_1^gS(1) \right]  + \frac{4K_z^2 \dot{\psi_1}}{K_2^\perp K_1^y K_2^y}\left[ \frac{C_2^uC(2)}{K_2^\perp} + C_2^gS(2) \right] + \frac{\dot{\psi_1} \dot{\psi_2}}{K_1^yK_2^y} \nonumber.
+\end{eqnarray}
+
+
+
+\begin{eqnarray}
+ (b_1^yb_2^y + v_1^yv_2^y)Q? &=&  \frac{16K_z^4}{K_1^\perp K_2^\perp K_1^y K_2^y}\left\{ 
+ \left[S(1)S(2) + C(1)C(2)\right]\left[ \frac{C_1^uC_2^u}{K_1^\perp K_2^\perp} +C_1^g C_2^g\right] + 
+ \left[S(1)C(2) + C(1)S(2)\right]\left[ \frac{C_1^uC_2^g}{K_1^\perp} + \frac{C_2^uC_1^g}{K_2^\perp}\right]
+ \right\} 
+ + \frac{K_1^\perp K_2^\perp}{K_1^yK_2^y}\psi_1\psi_2  + \frac{\dot{\psi_1} \dot{\psi_2}}{K_1^yK_2^y} \nonumber \\
+ && \frac{4K_z^2K_2^\perp}{K_1^\perp K_1^y K_2^y}\left[ \frac{C_1^uS(1)}{K_1^\perp} + C_1^gC(1) \right]\psi_2  + \frac{4K_z^2K_1^\perp}{K_2^\perp K_1^y K_2^y}\left[ \frac{C_2^uS(2)}{K_2^\perp} + C_2^gC(2) \right]\psi_1 
+   +\frac{4K_z^2 \dot{\psi_2}}{K_1^\perp K_1^y K_2^y}\left[ \frac{C_1^uC(1)}{K_1^\perp} + C_1^gS(1) \right]  + \frac{4K_z^2 \dot{\psi_1}}{K_2^\perp K_1^y K_2^y}\left[ \frac{C_2^uC(2)}{K_2^\perp} + C_2^gS(2) \right]  \nonumber.
+\end{eqnarray}
+
+
+\begin{eqnarray}
+ (b_1^yb_2^z + v_1^yv_2^z)Q? &=& \frac{16K_z^4}{K_1^\perp K_2^\perp K_1^y K_2^y}\left\{ 
+ \left[S(1)S(2) + C(1)C(2)\right]\left[ \frac{C_1^uC_2^u}{K_1^\perp K_2^\perp} + \frac{C_1^g C_2^g}3\right] + 
+ \left[S(1)C(2) + C(1)S(2)\right]\left[ \frac{C_1^uC_2^g}{3K_1^\perp} + \frac{C_2^uC_1^g}{K_2^\perp}\right]
+ \right\} + \nonumber \\
+ \frac{4K_z}{K_1^yK_2^\perp}\left\{ K_1^\perp \psi_1 \left[\frac{C_2^uS(2)}{K_2^\perp} + \frac{C_2^gC(2)}3 \right] + 
+ \dot{\psi_1} \left[\frac{C_2^uC(2)}{K_2^\perp} + \frac{C_2^gS(2)}3 \right] \right\}  \nonumber
+\end{eqnarray}
+
+
+\end{document}
