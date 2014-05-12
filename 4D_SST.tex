@@ -105,7 +105,6 @@ Q_1^y = +\left( K_y + \frac{Q_y}2  \right) > 0,\qquad Q_2^y = -\left( K_y - \fra
 \end{eqnarray}
 
 
-
 \begin{eqnarray}
  (b_1^yb_2^y + v_1^yv_2^y) &=&  \frac{16K_z^4}{K_1^\perp K_2^\perp K_1^y K_2^y}\left\{ 
  \left[S(1)S(2) + C(1)C(2)\right]\left[ \frac{C_1^uC_2^u}{K_1^\perp K_2^\perp} +C_1^g C_2^g\right] + 
@@ -117,12 +116,37 @@ Q_1^y = +\left( K_y + \frac{Q_y}2  \right) > 0,\qquad Q_2^y = -\left( K_y - \fra
 \end{eqnarray}
 
 
-
-
 \begin{eqnarray}
  (b_1^yb_2^z + v_1^yv_2^z) &=& \frac{16K_z^4}{K_1^\perp K_2^\perp K_1^y K_2^y}\left\{ 
  \left[S(1)S(2) - C(1)C(2)\right]\left[ \frac{C_1^g C_2^g}3 - \frac{C_1^uC_2^u}{K_1^\perp K_2^\perp} \right] + 
  \left[S(1)C(2) - C(1)S(2)\right]\left[ \frac{C_2^uC_1^g}{K_2^\perp} - \frac{C_1^uC_2^g}{3K_1^\perp}  \right]
+ \right\} +  \nonumber \\
+ && \frac{4K_z}{K_1^yK_2^\perp}\left\{ K_1^\perp \psi_1 \left[\frac{C_2^uS(2)}{K_2^\perp} + \frac{C_2^gC(2)}3 \right] + 
+ \dot{\psi_1} \left[\frac{C_2^uC(2)}{K_2^\perp} + \frac{C_2^gS(2)}3 \right] \right\} \nonumber
+\end{eqnarray}
+
+
+\begin{eqnarray}
+ S(1)S(2) + C(1)C(2) &=& C(1-2)=\cos(Q_1^\perp\xi - Q_2^\perp\xi)=\cos(Q_1^y\overline{\tau_1} - Q_2^y\overline{\tau_2})=\cos\left[-Q_1^x -(-Q_2^x)\right]= \cos(2K_x) \nonumber \\
+ S(1)S(2) - C(1)C(2) &=& C(1-2)=-\cos(Q_1^\perp\xi + Q_2^\perp\xi)=\cos\left[-Q_1^x +(-Q_2^x)\right]= -\cos(-Q_x)=-\cos(Q_x) \nonumber \\ 
+ S(1)C(2) - C(1)S(2) &=& S(1-2)=\sin(2K_x) \nonumber \\
+ S(1)C(2) + C(1)S(2) &=& S(1-2)=\sin(Q_x) \nonumber
+\end{eqnarray}
+
+\begin{eqnarray}
+ (b_1^yb_2^y + v_1^yv_2^y) &=&  \frac{16K_z^4}{K_1^\perp K_2^\perp K_1^y K_2^y}\left\{ 
+ \cos(2K_x)\left[ \frac{C_1^uC_2^u}{K_1^\perp K_2^\perp} +C_1^g C_2^g\right] + 
+ \sin(Q_x)\left[ \frac{C_1^uC_2^g}{K_1^\perp} + \frac{C_2^uC_1^g}{K_2^\perp}\right]
+ \right\} 
+ + \frac{K_1^\perp K_2^\perp}{K_1^yK_2^y}\psi_1\psi_2  + \frac{\dot{\psi_1} \dot{\psi_2}}{K_1^yK_2^y} \nonumber \\
+ && \frac{4K_z^2K_2^\perp}{K_1^\perp K_1^y K_2^y}\left[ \frac{C_1^uS(1)}{K_1^\perp} + C_1^gC(1) \right]\psi_2  + \frac{4K_z^2K_1^\perp}{K_2^\perp K_1^y K_2^y}\left[ \frac{C_2^uS(2)}{K_2^\perp} + C_2^gC(2) \right]\psi_1 
+   +\frac{4K_z^2 \dot{\psi_2}}{K_1^\perp K_1^y K_2^y}\left[ \frac{C_1^uC(1)}{K_1^\perp} + C_1^gS(1) \right]  + \frac{4K_z^2 \dot{\psi_1}}{K_2^\perp K_1^y K_2^y}\left[ \frac{C_2^uC(2)}{K_2^\perp} + C_2^gS(2) \right]  \nonumber.
+\end{eqnarray}
+
+\begin{eqnarray}
+ (b_1^yb_2^z + v_1^yv_2^z) &=& \frac{16K_z^4}{K_1^\perp K_2^\perp K_1^y K_2^y}\left\{ 
+ -\cos(Q_x)\left[ \frac{C_1^g C_2^g}3 - \frac{C_1^uC_2^u}{K_1^\perp K_2^\perp} \right] + 
+ \sin(2K_x)\left[ \frac{C_2^uC_1^g}{K_2^\perp} - \frac{C_1^uC_2^g}{3K_1^\perp}  \right]
  \right\} +  \nonumber \\
  && \frac{4K_z}{K_1^yK_2^\perp}\left\{ K_1^\perp \psi_1 \left[\frac{C_2^uS(2)}{K_2^\perp} + \frac{C_2^gC(2)}3 \right] + 
  \dot{\psi_1} \left[\frac{C_2^uC(2)}{K_2^\perp} + \frac{C_2^gS(2)}3 \right] \right\} \nonumber
