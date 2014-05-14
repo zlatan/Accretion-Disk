@@ -12,6 +12,7 @@
 
 \begin{document}
 
+\title{4D-SST}
 
 \begin{eqnarray}
 \mathrm{d}_\tau\mathbf{v}&=&-v_x\mathbf{e}_y+2n_y\mathbf{n}v_x+K_\alpha\mathbf{b},\\
@@ -96,13 +97,14 @@ Q_1^y = +\left( K_y + \frac{Q_y}2  \right) > 0,\qquad Q_2^y = -\left( K_y - \fra
 \end{eqnarray}
 
 \begin{eqnarray}
- (b_1^yb_2^y + v_1^yv_2^y &=&  \frac{16K_z^4}{K_1^\perp K_2^\perp K_1^y K_2^y}\left\{ 
+ (b_1^yb_2^y + v_1^yv_2^y) &=&  \frac{16K_z^4}{K_1^\perp K_2^\perp K_1^y K_2^y}\left\{ 
  \left[S(1)S(2) + C(1)C(2)\right]\left[ \frac{C_1^uC_2^u}{K_1^\perp K_2^\perp} +C_1^g C_2^g\right] + 
  \left[S(1)C(2) + C(1)S(2)\right]\left[ \frac{C_1^uC_2^g}{K_1^\perp} + \frac{C_2^uC_1^g}{K_2^\perp}\right]
  \right\} + \nonumber \\
  && \frac{4K_z^2K_2^\perp}{K_1^\perp K_1^y K_2^y}\left[ \frac{C_1^uS(1)}{K_1^\perp} + C_1^gC(1) \right]\psi_2  + \frac{4K_z^2K_1^\perp}{K_2^\perp K_1^y K_2^y}\left[ \frac{C_2^uS(2)}{K_2^\perp} + C_2^gC(2) \right]\psi_1 + \frac{K_1^\perp K_2^\perp}{K_1^yK_2^y}\psi_1\psi_2 + \nonumber \\
  && \frac{4K_z^2 \dot{\psi_2}}{K_1^\perp K_1^y K_2^y}\left[ \frac{C_1^uC(1)}{K_1^\perp} + C_1^gS(1) \right]  + \frac{4K_z^2 \dot{\psi_1}}{K_2^\perp K_1^y K_2^y}\left[ \frac{C_2^uC(2)}{K_2^\perp} + C_2^gS(2) \right] + \frac{\dot{\psi_1} \dot{\psi_2}}{K_1^yK_2^y} \nonumber.
 \end{eqnarray}
+
 
 
 \begin{eqnarray}
@@ -124,7 +126,6 @@ Q_1^y = +\left( K_y + \frac{Q_y}2  \right) > 0,\qquad Q_2^y = -\left( K_y - \fra
  && \frac{4K_z}{K_1^yK_2^\perp}\left\{ K_1^\perp \psi_1 \left[\frac{C_2^uS(2)}{K_2^\perp} + \frac{C_2^gC(2)}3 \right] + 
  \dot{\psi_1} \left[\frac{C_2^uC(2)}{K_2^\perp} + \frac{C_2^gS(2)}3 \right] \right\} \nonumber
 \end{eqnarray}
-
 
 \begin{eqnarray}
  S(1)S(2) + C(1)C(2) &=& C(1-2)=\cos(Q_1^\perp\xi - Q_2^\perp\xi)=\cos(Q_1^y\overline{\tau_1} - Q_2^y\overline{\tau_2})=\cos\left[-Q_1^x -(-Q_2^x)\right]= \cos(2K_x) \nonumber \\
@@ -153,11 +154,21 @@ Q_1^y = +\left( K_y + \frac{Q_y}2  \right) > 0,\qquad Q_2^y = -\left( K_y - \fra
 \end{eqnarray}
 
 \begin{eqnarray}
- (b_1^yb_2^y + v_1^yv_2^y)Q_y &\approx&  \sin(Q_x) \frac{-16Q_z^4Q_y \left[ \frac{C_1^uC_2^g}{K_1^\perp} + \frac{C_2^uC_1^g}{K_2^\perp}\right]}
- {\sqrt{\left[(K_y+\frac{Q_y}2)^2 + K_z^2 \right]\left[(K_y-\frac{Q_y}2)^2 + K_z^2 \right]} (K_y+\frac{Q_y}2)(K_y-\frac{Q_y}2) }  \nonumber \\
- (b_1^yb_2^z + v_1^yv_2^z)Q_z &\approx&  \cos(Q_x) \frac{16K_z^4Q_z  \left[ \frac{C_1^g C_2^g}3 - \frac{C_1^uC_2^u}{K_1^\perp K_2^\perp} \right]}
+ (b_1^yb_2^y + v_1^yv_2^y)Q_y &\approx&  \sin(Q_x) \frac{-16K_z^4Q_y \left[ \frac{C_1^uC_2^g}{\sqrt{\left[(K_y+\frac{Q_y}2)^2 + K_z^2 \right]}} + \frac{C_1^gC_2^u}{ \sqrt{\left[(K_y-\frac{Q_y}2)^2 + K_z^2 \right]} }\right]}
+  {\sqrt{\left[(K_y+\frac{Q_y}2)^2 + K_z^2 \right]\left[(K_y-\frac{Q_y}2)^2 + K_z^2 \right]} (K_y+\frac{Q_y}2)(K_y-\frac{Q_y}2) }  \nonumber \\
+ (b_1^yb_2^z + v_1^yv_2^z)Q_z &\approx&  \cos(Q_x) \frac{16K_z^4Q_z  \left[ \frac{C_1^g C_2^g}3 - \frac{C_1^uC_2^u}{\sqrt{\left[(K_y+\frac{Q_y}2)^2 + K_z^2 \right] \left[(K_y+\frac{Q_y}2)^2 - K_z^2 \right]} } \right]}
  {\sqrt{\left[(K_y+\frac{Q_y}2)^2 + K_z^2 \right]\left[(K_y-\frac{Q_y}2)^2 + K_z^2 \right]} (K_y+\frac{Q_y}2)(K_y-\frac{Q_y}2) }  \nonumber
 \end{eqnarray}
+
+\begin{equation}
+ F^{ext}=-\int_{Q_x/2}^\infty 
+ \frac{\mathrm{d}K_x}{2\pi} \int_{Q_y/2}^\infty \frac{\mathrm{d}K_y}{2\pi} \int_{-\infty}^\infty \frac{\mathrm{d}K_z}{2\pi}
+\, Q_1^y \left[ 
+\sin(Q_x) \frac{-16K_z^4Q_y \left[ \frac{C_1^uC_2^g}{\sqrt{\left[(K_y+\frac{Q_y}2)^2 + K_z^2 \right]}} + \frac{C_1^gC_2^u}{ \sqrt{\left[(K_y-\frac{Q_y}2)^2 + K_z^2 \right]} }\right]}{\sqrt{\left[(K_y+\frac{Q_y}2)^2 + K_z^2 \right]\left[(K_y-\frac{Q_y}2)^2 + K_z^2 \right]} (K_y+\frac{Q_y}2)(K_y-\frac{Q_y}2) } 
++
+\cos(Q_x) \frac{16K_z^4Q_z  \left[ \frac{C_1^g C_2^g}3 - \frac{C_1^uC_2^u}{\sqrt{\left[(K_y+\frac{Q_y}2)^2 + K_z^2 \right] \left[(K_y+\frac{Q_y}2)^2 - K_z^2 \right]} } \right]} {\sqrt{\left[(K_y+\frac{Q_y}2)^2 + K_z^2 \right]\left[(K_y-\frac{Q_y}2)^2 + K_z^2 \right]} (K_y+\frac{Q_y}2)(K_y-\frac{Q_y}2) }
+\right].
+\end{equation}
 
 
 \end{document}
